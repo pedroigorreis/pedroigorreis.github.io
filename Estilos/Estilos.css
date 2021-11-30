@@ -1,0 +1,119 @@
+body p
+{
+	color: #eeeeee;
+	text-align: justify;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	font-family: Fira Sans;
+	font-size: 14px;
+}
+
+body
+{
+	align-items: center;
+	opacity: 1.0;
+	background: linear-gradient(-45deg, #c4c4c4, #333333);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.Banner img
+{
+	min-width: 100%;
+	max-width: 100%;
+}
+
+.Banner a:link
+{
+	color: #eeeeee;
+}
+
+.Banner a:hover
+{
+	color: #333333;
+}
+
+.Banner a:visited
+{
+	color: #444444;
+}
+
+@keyframes gradient 
+{
+	0% 
+	{
+		background-position: 0% 50%;
+	}
+	50% 
+	{
+		background-position: 100% 50%;
+	}
+	100% 
+	{
+		background-position: 0% 50%;
+	}
+}
+
+.Perfil
+{
+	display: none;
+}
+
+.Perfil img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding: 5%;
+}
+.Perfil p
+{
+	text-align: justify;
+	font-size: 1.1em
+	align-items: center;
+}
+
+.Projetos
+{
+	display: none;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.Projetos img
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	padding: 5%;
+}
+
+.Repositorios
+{
+	display: none;
+}
+.Contato
+{
+	items-align: center;
+	background-color: #333333;
+}
+
+.Contato a:link
+{
+	color: #eeeeee;
+}
+
+.Contato a:hover
+{
+	color: white;
+}
+
+.Contato a:visited
+{
+	color: #b3b3b3;
+}
