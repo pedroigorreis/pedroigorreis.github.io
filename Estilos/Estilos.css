@@ -72,18 +72,20 @@ body
 
 .Perfil img
 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  padding: 5%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	border-style: solid;
+	border-width: 15px;
+	border-color: #eeeeee;
+	margin-top:50px;
+	box-shadow: 10px 10px 5px #333333;
 }
 
-.Perfil p
+.Perfil li
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	color: #eeeeee;
 }
 
 .Projetos
@@ -100,6 +102,15 @@ body
 	margin-right: auto;
 	max-width: 100%;
 	padding: 5%;
+}
+
+.Projetos code
+{
+	padding: 1%;
+	font-family: Fira Code Semibold;
+	background-color: #333333;
+	color: #eeeeee;
+	border-radius: 5px;
 }
 
 .Repositorios
