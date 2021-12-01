@@ -28,68 +28,119 @@
 			<div class="Banner">
 				<ul class="nav justify-content-end">
 					<li class="nav-item">
-					<a class="nav-link" href="#">
+					<a onclick="mostrarBanner()" class="nav-link">
 						<i class="fas fa-home"></i>
 					</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#sobremim">
+						<a onclick="mostrarPerfil()" class="nav-link">
 							<i class="far fa-address-card"></i>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#projetos">
+						<a onclick="mostrarProjetos()" class="nav-link">
 							<i class="fas fa-project-diagram"></i>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#repositorios">
+						<a onclick="mostrarRepositorios()" class="nav-link">
 							<i class="fab fa-github"></i>
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#Contato">
-							<i class="far fa-id-badge"></i>
-						</a>
-					</li>
 				</ul>
-				<img src="Imagens/Perfil/Banner.png" alt="Banner" title="Banner"/>
+				<img src="Imagens/Perfil/Banner.png" alt="Banner" title="Banner" id="Banner"/>
 			</div>
 		</header>
 		<main>
-			<!-- 1ª Sessão - Perfil -->
-			<section class="Perfil">
+			<section class="Perfil" id="Perfil"> <!-- 1ª Sessão - Perfil -->
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 							<img src="Imagens/Perfil/FotoPrincipal.png"/>
 						</div>
 						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-							<p>
-								Sempre fui ligado as novas tecnologias, quando pequeno, sonhava em trabalhar nas gigantes do Vale do Silício, no entanto em 2016 me apaixonei com o mundo Open Source, principalmente no Universo Linux. Hoje desejo trabalhar e colaborar com projetos que possam se tornar soluções mais baratas e eficientes para pequenas e grandes empresas. Fiz um ano no Curso Superior de Tecnologia em Jogos Digitais e participei no desenvolvimento no jogo 'CNLR', tendo maior destaque na parte artística do jogo. Hoje estudo tanto sistemas Operacionais baseados em UNIX como programas de Desing Gráfico FOSS como Inkscape, Gimp, Scribus e Darktable como alternativas totalmente gratuitas para o pacote Adobe.
-							</p>
+							<code>
+								
+							</code>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- 2ª Sessão - Projetos -->
-			<section class="Projetos">
+			<section class="Projetos" id="Projetos"> <!-- 2ª Sessão - Projetos -->
 				<div class="container">
-					<!-- Tier I -->
-					<div class="row">
+					<div class="row"> <!-- Tier I -->
 						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 							<img src="Imagens/Projetos/CLNR.png"/>
 						</div>
 						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+							<h1>
+								CLNR
+								<span class="badge bg-secondary">
+									Off <i class="fas fa-redo"></i>
+								</span>
+							</h1>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id est arcu. Phasellus ultrices justo in leo elementum, sed elementum elit dapibus. Aliquam iaculis convallis elit vitae euismod. Nunc mattis purus ante, non pellentesque magna blandit lacinia. Pellentesque fringilla, ex id dictum varius, tortor nunc vestibulum eros, ut suscipit velit nisi et ligula. Nullam fringilla magna at finibus varius. Nulla scelerisque cursus placerat. Maecenas porta, elit ut vestibulum cursus, neque velit euismod est, id venenatis dui est nec leo. Morbi metus nunc, dictum et dictum eget, ullamcorper eu nibh. Cras tincidunt laoreet eros, sed pulvinar mauris porta eu. Aenean pulvinar risus sit amet ante consequat, id rhoncus velit sagittis. Integer pretium feugiat mi, non auctor nisi imperdiet id. 
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id est arcu. Phasellus ultrices justo in leo elementum, sed elementum elit dapibus. Aliquam iaculis convallis elit vitae euismod. Nunc mattis purus ante, non pellentesque magna blandit lacinia. Pellentesque fringilla, ex id dictum varius, tortor nunc vestibulum eros, ut suscipit velit nisi et ligula. Nullam fringilla magna at finibus varius. Nulla scelerisque cursus placerat. Maecenas porta, elit ut vestibulum cursus, neque velit euismod est, id venenatis dui est nec leo. Morbi metus nunc, dictum et dictum eget, ullamcorper eu nibh. Cras tincidunt laoreet eros, sed pulvinar mauris porta eu. Aenean pulvinar risus sit amet ante consequat, id rhoncus velit sagittis. Integer pretium feugiat mi, non auctor nisi imperdiet id.
+							</p>
+						</div>
+					</div>
+					<div class="row"> <!-- Tier II -->
+						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+							<img src="Imagens/Projetos/Sway.png"/>
+						</div>
+						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+							<h1>
+								Sway
+								<a href="https://gitlab.com/ORZAYAZ/sway" target="_blank">
+									<span class="badge bg-secondary">
+										Gitlab <i class="fab fa-gitlab"></i>
+									</span>
+								</a>
+							</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia, leo maximus dignissim elementum, quam tellus laoreet sapien, sed elementum orci massa vitae mauris. Pellentesque condimentum laoreet blandit. Phasellus eu leo vitae turpis convallis faucibus sed id purus. Nam eget leo pretium, auctor elit vel, lobortis nisl. Aenean sed enim dictum, consectetur diam eu, auctor felis. Suspendisse vel est in augue blandit tempus. In hac habitasse platea dictumst. Sed libero nunc, ultrices a odio quis, elementum hendrerit augue. Quisque suscipit, nibh eu sagittis sodales, arcu justo ultrices nulla, convallis posuere sapien ligula quis quam. Sed mi enim, interdum ut purus sit amet, vulputate pharetra nisi. Cras porttitor, velit ac scelerisque porta, nibh tellus laoreet lacus, eu commodo erat orci sed nisl. Donec interdum, urna vitae elementum cursus, dolor velit bibendum arcu, quis tempor libero orci vel orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+							</p>
+						</div>
+					</div>
+					<div class="row"> <!-- Tier III -->
+						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+							<img src="Imagens/Projetos/Wayfire.png"/>
+						</div>
+						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+							<h1>
+								Wayfire
+								<a href="https://gitlab.com/ORZAYAZ/wayfire" target="_blank">
+									<span class="badge bg-secondary">
+										Gitlab <i class="fab fa-gitlab"></i>
+									</span>
+								</a>
+							</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia, leo maximus dignissim elementum, quam tellus laoreet sapien, sed elementum orci massa vitae mauris. Pellentesque condimentum laoreet blandit. Phasellus eu leo vitae turpis convallis faucibus sed id purus. Nam eget leo pretium, auctor elit vel, lobortis nisl. Aenean sed enim dictum, consectetur diam eu, auctor felis. Suspendisse vel est in augue blandit tempus. In hac habitasse platea dictumst. Sed libero nunc, ultrices a odio quis, elementum hendrerit augue. Quisque suscipit, nibh eu sagittis sodales, arcu justo ultrices nulla, convallis posuere sapien ligula quis quam. Sed mi enim, interdum ut purus sit amet, vulputate pharetra nisi. Cras porttitor, velit ac scelerisque porta, nibh tellus laoreet lacus, eu commodo erat orci sed nisl. Donec interdum, urna vitae elementum cursus, dolor velit bibendum arcu, quis tempor libero orci vel orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+							</p>
+						</div>
+					</div>
+					<div class="row"> <!-- Tier IV -->
+						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+							<img src="Imagens/Projetos/i3.png"/>
+						</div>
+						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+							<h1>
+								Ambiente de trabalho i3
+								<a href="https://gitlab.com/ORZAYAZ/i3" target="_blank">
+									<span class="badge bg-secondary">
+										Gitlab <i class="fab fa-gitlab"></i>
+									</span>
+								</a>
+							</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia, leo maximus dignissim elementum, quam tellus laoreet sapien, sed elementum orci massa vitae mauris. Pellentesque condimentum laoreet blandit. Phasellus eu leo vitae turpis convallis faucibus sed id purus. Nam eget leo pretium, auctor elit vel, lobortis nisl. Aenean sed enim dictum, consectetur diam eu, auctor felis. Suspendisse vel est in augue blandit tempus. In hac habitasse platea dictumst. Sed libero nunc, ultrices a odio quis, elementum hendrerit augue. Quisque suscipit, nibh eu sagittis sodales, arcu justo ultrices nulla, convallis posuere sapien ligula quis quam. Sed mi enim, interdum ut purus sit amet, vulputate pharetra nisi. Cras porttitor, velit ac scelerisque porta, nibh tellus laoreet lacus, eu commodo erat orci sed nisl. Donec interdum, urna vitae elementum cursus, dolor velit bibendum arcu, quis tempor libero orci vel orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- 3ª Sessão - Repositórios -->
-			<section class="Repositorios">
+			<section class="Repositorios" id="Repositorios"> <!-- 3ª Sessão - Repositórios -->
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -98,7 +149,7 @@
 				</div>
 			</section>
 		</main>
-		<footer>
+		<footer> <!-- 4ª Sessão - Formas de contatos -->
 			<div class="Contato" id="Contato">
 				<ul class="nav justify-content-center">
 					<li class="nav-item">
