@@ -10,4 +10,4 @@
 * Mozilla Fira Sans / Code
 
 ## Preview
-![Preview](https://github.com/pedroigorreis/Portfolio/blob/main/Imagens/Prints/Print.png?raw=true)
+![Preview](https://github.com/pedroigorreis/Portfolio/blob/main/Imagens/completa-24.png?raw=true)
