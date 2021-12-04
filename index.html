@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 	<head>
-		<!-- Título -->
 		<title>
 			Portfólio - Pedro Igor
 		</title>
-		<!-- Metatags -->
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<!-- Logotipo da página -->
 		<link rel="icon" href="Imagens/Logo/Logo.gif"/>
-		<!-- CSS -->
 		<link href="Estilos/Estilos.css" rel="stylesheet"/>
-		<!-- Fonte Fira (by Mozilla) & FontAwesome -->
 		<link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.0.0/distr/fira_code.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
-		<!-- Bootstrap -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
-		<!-- Scripts --->
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script src="Scripts/Scripts.js"></script>
 	</head>
-	<body>
+	<body onload="imprimirPerfil ()">
 		<header class="Cabecalho">
 			<div class="Banner">
 				<ul class="nav justify-content-end">
@@ -52,22 +45,22 @@
 			</div>
 		</header>
 		<main>
-			<section class="Perfil" id="Perfil"> <!-- 1ª Sessão - Perfil -->
+			<div class="Perfil" id="Perfil">
 				<div class="container">
 					<div class="row">
-						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-							<img src="Imagens/Perfil/FotoPrincipal.png" alt="Perfil"/>
+						<div class="col-12">
+							<img src="Imagens/Perfil/FT.png" alt="Perfil"/>
 						</div>
-						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-							<h1>
-								Sobre
-							</h1>
+						<div class="col-12">
+							<h3>
+								Sobre mim
+							</h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec mauris augue. Nam eget velit fringilla, ultrices mauris vitae, vehicula libero. Nulla ac quam nec odio rutrum egestas. Fusce ante sem, fermentum nec aliquet at, ultricies quis libero. Quisque id maximus sem, vitae bibendum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed posuere tristique ligula, quis pharetra dolor sagittis eget. Pellentesque at velit a felis pharetra iaculis et ac orci. Fusce malesuada est ut sem luctus sollicitudin. Aenean eget libero ut neque venenatis molestie. In at neque luctus, mattis est at, egestas urna. Nulla facilisi. In in vehicula erat. Ut eget mauris et quam maximus volutpat. Proin maximus lacinia tempus. Nunc ullamcorper mauris in ex semper, ac tristique urna aliquam. 
 							</p>
-							<h1>
+							<h3>
 								Conhecimentos
-							</h1>
+							</h3>
 							<ul>
 								<li>
 									Certificação com editor nano <i class="fas fa-marker"></i>
@@ -85,109 +78,103 @@
 									Uso de sistemas baseados em Linux <i class="fab fa-redhat"></i>  <i class="fab fa-suse"></i> <i class="fab fa-fedora"></i> <i class="fab fa-ubuntu"></i>
 								</li>
 							</ul>
-							<h1>
+							<h3>
 								Atual ocupação
-							</h1>
+							</h3>
 							<p>
 								Recivil - BH | Mar/21
 							</p>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="Projetos" id="Projetos"> <!-- 2ª Sessão - Projetos -->
+			</div>
+			<div class="Projetos" id="Projetos">
 				<div class="container">
-					<div class="row"> <!-- Tier I -->
+					<div class="row">
 						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-							<img src="Imagens/Projetos/CLNR.png"/>
+							<img src="Imagens/Projetos/CLNR.png" alt="Projeto CLNR"/>
 						</div>
 						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-							<h1>
+							<h3>
 								CLNR
 								<span class="badge bg-secondary">
-									Off <i class="fas fa-redo"></i>
+									Ainda no rascunho <i class="fas fa-drafting-compass"></i>
 								</span>
-							</h1>
+							</h3>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id est arcu. Phasellus ultrices justo in leo elementum, sed elementum elit dapibus. Aliquam iaculis convallis elit vitae euismod. Nunc mattis purus ante, non pellentesque magna blandit lacinia. Pellentesque fringilla, ex id dictum varius, tortor nunc vestibulum eros, ut suscipit velit nisi et ligula. Nullam fringilla magna at finibus varius. Nulla scelerisque cursus placerat. Maecenas porta, elit ut vestibulum cursus, neque velit euismod est, id venenatis dui est nec leo. Morbi metus nunc, dictum et dictum eget, ullamcorper eu nibh. Cras tincidunt laoreet eros, sed pulvinar mauris porta eu. Aenean pulvinar risus sit amet ante consequat, id rhoncus velit sagittis. Integer pretium feugiat mi, non auctor nisi imperdiet id.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id est arcu. Phasellus ultrices justo in leo elementum, sed elementum elit dapibus. Aliquam iaculis convallis elit vitae euismod. Nunc mattis purus ante, non pellentesque magna blandit lacinia. Pellentesque fringilla, ex id dictum varius, tortor nunc vestibulum eros, ut suscipit velit nisi et ligula. Nullam fringilla magna at finibus varius. Nulla scelerisque cursus placerat. Maecenas porta, elit ut vestibulum cursus, neque velit euismod est, id venenatis dui est nec leo. Morbi metus nunc, dictum et dictum eget, ullamcorper eu nibh. Cras tincidunt laoreet eros, sed pulvinar mauris porta eu.
 							</p>
 						</div>
 					</div>
-					<div class="row"> <!-- Tier II -->
+					<div class="row">
 						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-							<img src="Imagens/Projetos/Sway.png"/>
+							<img src="Imagens/Projetos/Sway.png" alt="Projeto Sway"/>
 						</div>
 						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-							<h1>
+							<h3>
 								Sway
 								<a href="https://gitlab.com/ORZAYAZ/sway" target="_blank">
 									<span class="badge bg-secondary">
 										Gitlab <i class="fab fa-gitlab"></i>
 									</span>
 								</a>
-							</h1>
+							</h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia, leo maximus dignissim elementum, quam tellus laoreet sapien, sed elementum orci massa vitae mauris. Pellentesque condimentum laoreet blandit. Phasellus eu leo vitae turpis convallis faucibus sed id purus. Nam eget leo pretium, auctor elit vel, lobortis nisl. Aenean sed enim dictum, consectetur diam eu, auctor felis. Suspendisse vel est in augue blandit tempus. In hac habitasse platea dictumst. Sed libero nunc, ultrices a odio quis, elementum hendrerit augue. Quisque suscipit, nibh eu sagittis sodales, arcu justo ultrices nulla, convallis posuere sapien ligula quis quam. Sed mi enim, interdum ut purus sit amet, vulputate pharetra nisi. Cras porttitor, velit ac scelerisque porta, nibh tellus laoreet lacus, eu commodo erat orci sed nisl. Donec interdum, urna vitae elementum cursus, dolor velit bibendum arcu, quis tempor libero orci vel orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 							</p>
 							<code>
-								$ git clone https://gitlab.com/ORZAYAZ/sway && sway/script.sh
+								$ git clone https://gitlab.com/ORZAYAZ/sway
 							</code>
 						</div>
 					</div>
 					<div class="row"> <!-- Tier III -->
 						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-							<img src="Imagens/Projetos/Wayfire.png"/>
+							<img src="Imagens/Projetos/Wayfire.png" alt="Projeto Wayfire"/>
 						</div>
 						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-							<h1>
+							<h3>
 								Wayfire
 								<a href="https://gitlab.com/ORZAYAZ/wayfire" target="_blank">
 									<span class="badge bg-secondary">
 										Gitlab <i class="fab fa-gitlab"></i>
 									</span>
 								</a>
-							</h1>
+							</h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia, leo maximus dignissim elementum, quam tellus laoreet sapien, sed elementum orci massa vitae mauris. Pellentesque condimentum laoreet blandit. Phasellus eu leo vitae turpis convallis faucibus sed id purus. Nam eget leo pretium, auctor elit vel, lobortis nisl. Aenean sed enim dictum, consectetur diam eu, auctor felis. Suspendisse vel est in augue blandit tempus. In hac habitasse platea dictumst. Sed libero nunc, ultrices a odio quis, elementum hendrerit augue. Quisque suscipit, nibh eu sagittis sodales, arcu justo ultrices nulla, convallis posuere sapien ligula quis quam. Sed mi enim, interdum ut purus sit amet, vulputate pharetra nisi. Cras porttitor, velit ac scelerisque porta, nibh tellus laoreet lacus, eu commodo erat orci sed nisl. Donec interdum, urna vitae elementum cursus, dolor velit bibendum arcu, quis tempor libero orci vel orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 							</p>
 							<code>
-								$ git clone https://gitlab.com/ORZAYAZ/wayfire && wayfire/script.sh
+								$ git clone https://gitlab.com/ORZAYAZ/wayfire
 							</code>
 						</div>
 					</div>
-					<div class="row"> <!-- Tier IV -->
+					<div class="row">
 						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-							<img src="Imagens/Projetos/i3.png"/>
+							<img src="Imagens/Projetos/i3.png" alt="Projeto i3"/>
 						</div>
 						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-							<h1>
+							<h3>
 								Ambiente de trabalho i3
 								<a href="https://gitlab.com/ORZAYAZ/i3" target="_blank">
 									<span class="badge bg-secondary">
 										Gitlab <i class="fab fa-gitlab"></i>
 									</span>
 								</a>
-							</h1>
+							</h3>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia, leo maximus dignissim elementum, quam tellus laoreet sapien, sed elementum orci massa vitae mauris. Pellentesque condimentum laoreet blandit. Phasellus eu leo vitae turpis convallis faucibus sed id purus. Nam eget leo pretium, auctor elit vel, lobortis nisl. Aenean sed enim dictum, consectetur diam eu, auctor felis. Suspendisse vel est in augue blandit tempus. In hac habitasse platea dictumst. Sed libero nunc, ultrices a odio quis, elementum hendrerit augue. Quisque suscipit, nibh eu sagittis sodales, arcu justo ultrices nulla, convallis posuere sapien ligula quis quam. Sed mi enim, interdum ut purus sit amet, vulputate pharetra nisi. Cras porttitor, velit ac scelerisque porta, nibh tellus laoreet lacus, eu commodo erat orci sed nisl. Donec interdum, urna vitae elementum cursus, dolor velit bibendum arcu, quis tempor libero orci vel orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 							</p>
 							<code>
-								$ git clone https://gitlab.com/ORZAYAZ/i3 && i3/script.sh
+								$ git clone https://gitlab.com/ORZAYAZ/i3
 							</code>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="Repositorios" id="Repositorios"> <!-- 3ª Sessão - Repositórios -->
-				<div class="container">
-					<div class="row">
-						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-						</div>
-					</div>
-				</div>
-			</section>
+			</div>
+			<div class="Repositorios" id="Repositorios">
+			</div>
 		</main>
-		<footer> <!-- 4ª Sessão - Formas de contatos -->
+		<footer>
 			<div class="Contato" id="Contato">
 				<ul class="nav justify-content-center">
 					<li class="nav-item">
@@ -211,7 +198,3 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	</body>
 </html>
-
-<!--
-	Referências: https://www.youtube.com/watch?v=EJGMZfeTX-4
---->
