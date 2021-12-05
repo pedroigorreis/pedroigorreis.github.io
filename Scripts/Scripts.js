@@ -1,105 +1,128 @@
-function mostrarBanner ()
-{
-	document.getElementById("Banner").style.display = "flex";
-	document.getElementById("Perfil").style.display = "none";
-	document.getElementById("Projetos").style.display = "none";
-	document.getElementById("Repositorios").style.display = "none";
-}
-
-function mostrarPerfil ()
-{
-	document.getElementById("Banner").style.display = "none";
-	document.getElementById("Perfil").style.display = "flex";
-	document.getElementById("Projetos").style.display = "none";
-	document.getElementById("Repositorios").style.display = "none";
-}
-
-function mostrarProjetos ()
-{
-	document.getElementById("Banner").style.display = "none";
-	document.getElementById("Perfil").style.display = "none";
-	document.getElementById("Projetos").style.display = "flex";
-	document.getElementById("Repositorios").style.display = "none";
-}
-
-function mostrarRepositorios ()
-{
-	document.getElementById("Banner").style.display = "none";
-	document.getElementById("Perfil").style.display = "none";
-	document.getElementById("Projetos").style.display = "none";
-	document.getElementById("Repositorios").style.display = "flex";
-}
-
-function imprimirPerfil ()
+function imprimirGithub()
 {
 	let xhr = new XMLHttpRequest ();
 	xhr.onload = function ()
 	{
 		let data = JSON.parse (this.responseText);
 		let impressao = 
-		`	<div class="container">
-					<div class="row">
-						<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-							<div class="meuGithub">
-								<img src="${data.avatar_url}"/>
-							</div>
-						</div>
-						<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-							<div class="meuGithub">
-								<h3>
-									Info
-								</h3>
-								<ul>
-									<li>
-										<i class="fab fa-github"></i> ${data.login}
-									</li>
-									<li>
-										<i class="far fa-building"></i> ${data.company}
-									</li>
-									<li>
-										<i class="fas fa-map-marked-alt"></i> ${data.location}
-									</li>
-									<li>
-										<i class="fas fa-globe"></i> ${data.blog}
-									</li>
-								</a>
-									</li>
-								</ul>
-								<p>
-									<i class="fas fa-book"></i> ${data.bio}
-								</p>
-								<span class="badge bg-dark">
-									<i class="fas fa-code-branch"></i> Rep. Públicos ${data.public_repos}
-								</span>
-								<span class="badge bg-dark">
-									<i class="fas fa-user-circle"></i> Seguindo ${data.following}
-								</span>
-								<span class="badge bg-dark">
-									<i class="far fa-user-circle"></i> Seguidores ${data.followers}
-								</span>
-							</div>
-							<div class="meuGithub">
-								<h3>
-									Buscar repositórios
-								</h3>
-								<div class="input-group rounded">
-									<input type="text" class="form-control rounded" placeholder="Digite o repositório desejado" aria-label="Pesquisa" aria-describedby="search-addon" />
-									<span class="input-group-text border-0" id="search-addon">
-										<i class="fas fa-search"></i>
-									</span>
-								</div>
+		`
+				<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+					<div id="perfil" class="bio">
+						<h6>
+							[pedroigor@   <i class="fab fa-redhat"></i> ~] feh $USERGIT_AVATAR
+						</h6>
+						<img src="${data.avatar_url}" alt="Git Avatar"/>
+						<h6>
+							[pedroigor@   <i class="fab fa-redhat"></i> ~] echo $USERGITLINK
+						</h6>
+						<code>
+							<a href="https://github.com/pedroigorreis/" taget="_blank">
+								→ Github access
+							</a>
+						</code>
+					</div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+						<div class="infoGit">
+							<h6>
+								[pedroigor@   <i class="fab fa-redhat"></i> ~] echo $(curl -i https://api.github.com/users/pedroigorreis) > myGit && cat myGit | less
+							</h6>
+							<div id="infoGit" class="bio">
+								<code>
+									<ul>
+										<li>
+											<i class="fas fa-user-plus"></i> followers => ${data.followers}
+										</li>
+										<li>
+											<i class="fas fa-user-friends"></i> following ==> ${data.following}
+										</li>
+										<li>
+											<i class="fab fa-git-alt"></i> public_repos => ${data.public_repos}
+										</li>																													
+										<li>
+											<i class="far fa-building"></i> company => ${data.company}
+										</li>
+										<li>
+											<i class="fab fa-github-alt"></i> username => ${data.login}
+										</li>
+										<li>
+											<i class="fas fa-street-view"></i> location => ${data.location}
+										</li>
+										<li>
+											<i class="fas fa-globe"></i> blog => ${data.blog}
+										</li>
+										<li>
+											(END)
+										</li>
+									</ul>
+								</code>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+			</code>
 		`;
-		document.getElementById ("Repositorios").innerHTML = impressao;
-	};
-	xhr.onerror = function ()
-	{
-		alert (`Erro na requisição: \n Código: ${this.status} - ${this.statusText}`);
-	};
+		document.getElementById ("infoGit").innerHTML = impressao;
+	}
 	xhr.open ('GET', 'https://api.github.com/users/pedroigorreis');
 	xhr.send ();
 }
+
+(function()
+{
+	const url = "https://api.github.com/users";
+	const informacoes = document.getElementById("info");
+	const pesquisa = document.getElementById("pesquisa");
+	
+	async function receberDados(usuario)
+	{
+		const perfilResposta = await fetch(`${url}/${usuario}`);
+		const perfil = perfilResposta.json();
+		return perfil;
+	}
+	function imprimirPerfil(usuario)
+	{
+		informacoes.innerHTML =
+		`
+			<h6>
+				[pedroigor@   <i class="fab fa-redhat"></i> ~] cat .userGit
+			</h6>
+			<img src="${usuario.avatar_url}" alt="User pic"/>
+			<code>
+				<ul>
+					<li>
+						<i class="fas fa-user-plus"></i> followers => ${usuario.followers}
+					</li>
+					<li>
+						<i class="fas fa-user-friends"></i> following ==> ${usuario.following}
+					</li>
+					<li>
+						<i class="fab fa-git-alt"></i> public_repos => ${usuario.public_repos}
+					</li>																													
+					<li>
+						<i class="far fa-building"></i> company => ${usuario.company}
+					</li>
+					<li>
+						<i class="fab fa-github-alt"></i> username => ${usuario.login}
+					</li>
+					<li>
+						<i class="fas fa-street-view"></i> location => ${usuario.location}
+					</li>
+					<li>
+						<i class="fas fa-globe"></i> blog => ${usuario.blog}
+					</li>
+				</ul>
+			</code>
+		`;
+	}
+	pesquisa.addEventListener("keyup", e =>
+	{
+		const usuario = e.target.value;
+		if(usuario.length > 0) // Fail
+		{
+			receberDados(usuario).then(res => imprimirPerfil(res));
+		}
+	});
+})();
+
+
+

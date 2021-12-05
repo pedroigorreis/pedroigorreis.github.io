@@ -1,172 +1,201 @@
-body p
+.cabecalho, .rodape, .separador, .bio, .perfilGit, .infoGit, .pesquisa
 {
-	color: #eeeeee;
-	text-align: justify;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 1%;
-	padding-bottom: 1%;
+	background-color: #2e3440;
+}
+
+.cabecalho a:link
+{
+	color: #eceff4;
+}
+
+.cabecalho a:hover
+{
+	color: #88c0d0;
+}
+
+.cabecalho a:active 
+{
+  color: #5e81ac;
+}
+
+.cabecalho a:visited 
+{
+  color: #8fbcbb;
+}
+
+.principal
+{
+    background: linear-gradient(270deg, #88c0d0, #81a1c1, #5e81ac, #4c566a);
+    background-size: 800% 800%;
+
+    -webkit-animation: bannerGradient 9s ease infinite;
+    -moz-animation: bannerGradient 9s ease infinite;
+    animation: bannerGradient 9s ease infinite;
+}
+
+@-webkit-keyframes bannerGradient 
+{
+    0%
+    {
+		background-position:0% 50%
+	}
+    50%
+    {
+		background-position:100% 50%
+	}
+    100%
+    {
+		background-position:0% 50%
+    }
+}
+@-moz-keyframes bannerGradient 
+{
+    0%
+    {
+		background-position:0% 50%
+	}
+    50%
+    {
+		background-position:100% 50%
+	}
+    100%
+    {
+		background-position:0% 50%
+	}
+}
+@keyframes bannerGradient 
+{
+    0%
+    {
+		background-position:0% 50%
+	}
+    50%
+    {
+		background-position:100% 50%
+	}
+    100%
+    {
+		background-position:0% 50%
+	}
+}
+
+.principal h1
+{
+	background: -webkit-linear-gradient(#4c566a, #2e3440);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	font-family: Fira Sans;
-	font-size: 14px;
 }
 
-body h3
+.principal img
 {
-	color: #eeeeee;
-	text-align: justify;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	font-family: Fira Sans
-}
-
-body
-{
-	align-items: center;
-	opacity: 1.0;
-	background: linear-gradient(-45deg, #c4c4c4, #333333);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-}
-
-.Banner img
-{
-	min-width: 100%;
 	max-width: 100%;
 }
 
-.Banner a
-{
-	color: #eeeeee;
-}
-
-.Banner a:hover
-{
-	color: #c4c4c4;
-}
-
-@keyframes gradient
-{
-	0%
-	{
-		background-position: 0% 50%;
-	}
-	50%
-	{
-		background-position: 100% 50%;
-	}
-	100%
-	{
-		background-position: 0% 50%;
-	}
-}
-
-.Perfil
-{
-	display: none;
-}
-
-.Perfil img
-{
-	margin: 5%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	max-width: 100%;
-	background-color: #333333;
-}
-
-.Perfil li
-{
-	color: #eeeeee;
-}
-
-.Projetos
-{
-	display: none;
-	align-items: center;
-	vertical-align: middle;
-}
-
-.Projetos img
-{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 100%;
-	padding: 5%;
-}
-
-.Projetos code
+.separador
 {
 	padding: 1%;
+}
+
+.bio, .perfilGit, .infoGit, .pesquisa
+{
+	margin: 15px;
+	padding-bottom: 1%;
+	border-radius: 15px;
+}
+
+.bio code, .pesquisa code
+{
+	color: #ebcb8b;
 	font-family: Fira Code Semibold;
-	background-color: #333333;
-	color: #eeeeee;
-	border-radius: 5px;
 }
 
-.Repositorios
+.bio ul li, .infoGit ul li, .pesquisa ul li
 {
-	display: none;
+	padding: 1%;
+	margin: auto;
+	display: flex;
+	font-size: 0.8em;
+	align-items:center;
 }
 
-.meuGithub
+.bio p, .infoGit p
 {
-	margin: 3%;
 	padding: 2%;
-	align-items: center;
-	background-color: #333333;
+	color: #eceff4;
+	font-size: 0.8em;
+	align-items:center;
+	text-align: justify;
+	font-family: Fira Sans;
 }
 
-.meuGithub img
+.bio h6, .infoGit h6, .pesquisa h6
 {
+	color: #d08770;
+	font-size: 10px;
+	padding-top: 15px;
+	margin-left: 15px;
+	font-family: Fira Code Semibold;
+}
+
+.bio img, .pesquisa img
+{
+	display: block;
+	max-width: 70%;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	border-radius: 20px;
+}
+
+.bio a
+{
+	color: #b48ead;
+	font-size: 10px;
+	margin-left: 20px;
+	text-decoration: none;
+	font-family: Fira Code Semibold;
+}
+
+.bio a:hover
+{
+	color: #eceff4;
+}
+
+.pesquisa input
+{
+	width: 70%;
+	padding-top: 2%;
+	border: none;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 100%;
-	padding: 2%;
 }
 
-.meuGithub li
+.pesquisa input[type=text]
 {
-	color: #eeeeee;
+	outline: none;
+	color: #eceff4;
+	font-size: 14px;
+	font-family: Fira Code Semibold;
+	background-color: #2e3440;
 }
 
-.meuGithub a
+.pesquisa input[type=text]:focus 
 {
-	color: #eeeeee;
-	text-align: center;
-	font-size: 1.5em;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #d8dee9;
 }
-
-.meuGithub a:hover
+.rodape p
 {
-	color: #c4c4c4;
-}
-
-.Contato
-{
-	width: 100%;
-	text-align: center;
-	align-items: center;
-	background-color: #333333;
-}
-
-.Contato a:link
-{
-	color: #eeeeee;
-}
-
-.Contato a:hover
-{
-	color: white;
-}
-
-.Contato a:visited
-{
-	color: #b3b3b3;
+	padding: 1%;
+	margin: auto;
+	display: flex;
+	color: #eceff4;
+	font-size: 1em;
+	align-items:center;
+	justify-content:center;
+	font-family: Fira Sans;
 }
