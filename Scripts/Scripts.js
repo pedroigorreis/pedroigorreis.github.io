@@ -69,6 +69,8 @@ function imprimirGithub()
 
 (function()
 {
+	const limite = 5;
+	const ordenar = "created: asc"
 	const url = "https://api.github.com/users";
 	const informacoes = document.getElementById("info");
 	const pesquisa = document.getElementById("pesquisa");
@@ -76,16 +78,15 @@ function imprimirGithub()
 	async function receberDados(usuario)
 	{
 		const perfilResposta = await fetch(`${url}/${usuario}`);
-		const perfil = perfilResposta.json();
-		return perfil;
+		const reposResposta = await fetch(`${url}/${usuario}/repos?per_page=${limite}&sort=${ordenar}`);
+		const perfil = await perfilResposta.json();
+		const repos = await reposResposta.json();
+		return { perfil,repos };
 	}
 	function imprimirPerfil(usuario)
 	{
 		informacoes.innerHTML =
 		`
-			<h6>
-				[pedroigor@   <i class="fab fa-redhat"></i> ~] cat .userGit
-			</h6>
 			<img src="${usuario.avatar_url}" alt="User pic"/>
 			<code>
 				<ul>
@@ -114,15 +115,40 @@ function imprimirGithub()
 			</code>
 		`;
 	}
+	function imprimirRepos(repos)
+	{
+		let saida = "";
+		repos.forEach(repos =>
+		{
+			saida += 
+			`
+				<code>
+					<ul>
+						<li>
+							<i class="fab fa-git-alt"></i> public_repos => ${repos.name}
+						</li>
+						<li>
+							<i class="far fa-star"></i> stars => ${repos.stargazers_count}
+						</li>
+						<li>
+							<i class="fas fa-eye"></i> watchers => ${repos.watchers_count}
+						</li>
+					</ul>
+				</code>
+			`;
+		});
+		document.getElementById("repos").innerHTML = saida;
+	}
 	pesquisa.addEventListener("keyup", e =>
 	{
 		const usuario = e.target.value;
-		if(usuario.length > 0) // Fail
+		if(usuario.length > 0)
 		{
-			receberDados(usuario).then(res => imprimirPerfil(res));
+			receberDados(usuario).then(res => 
+			{
+				imprimirPerfil(res.perfil); 
+				imprimirRepos(res.repos);
+			});
 		}
 	});
 })();
-
-
-
